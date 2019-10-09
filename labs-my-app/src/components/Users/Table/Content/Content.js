@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import s from './Content.module.css'
 const Content = props => {
-  const rows = props.characterData.map((row, index) => {
+  const lines= props.userData.map((line, index) => {
     return (
       <tr key={index}>
-        <td>{row.firstname}</td>
-        <td>{row.lastname}</td>
-        <td>{row.email}</td>
+        <td>{line.firstname}</td>
+        <td>{line.lastname}</td>
+        <td>{line.email}</td>
         <td>
          <button onClick={() => props.removeUser(index)}>Delete</button>
         </td>
@@ -14,6 +14,6 @@ const Content = props => {
     );
   });
 
-  return <tbody>{rows}</tbody>;
+  return <tbody>{lines}</tbody>;
 };
 export default Content;

@@ -32,7 +32,7 @@ class App extends Component {
           <TextForm handleSubmit={this.handleSubmit} />
         </div>
         <div className={s.block}>
-          <Users characterData={users} removeUser={this.removeUser} />
+          <Users userData={users} removeUser={this.removeUser} />
         </div>
       </div>
     );
