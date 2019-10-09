@@ -6,25 +6,25 @@ import s from "./App.module.css";
 
 class App extends Component {
   state = {
-    characters: []
+    users: []
   };
 
-  removeCharacter = index => {
-    const { characters } = this.state;
+  removeUser = index => {
+    const { users } = this.state;
 
     this.setState({
-      characters: characters.filter((character, i) => {
+      users: users.filter((user, i) => {
         return i !== index;
       })
     });
   };
 
-  handleSubmit = character => {
-    this.setState({ characters: [...this.state.characters, character] });
+  handleSubmit = user => {
+    this.setState({ users: [...this.state.users, user] });
   };
 
   render() {
-    const { characters } = this.state;
+    const { users } = this.state;
 
     return (
       <div className={s.container}>
@@ -32,10 +32,7 @@ class App extends Component {
           <TextForm handleSubmit={this.handleSubmit} />
         </div>
         <div className={s.block}>
-          <Users
-            characterData={characters}
-            removeCharacter={this.removeCharacter}
-          />
+          <Users characterData={users} removeUser={this.removeUser} />
         </div>
       </div>
     );

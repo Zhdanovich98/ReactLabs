@@ -4,16 +4,16 @@ class TextForm extends Component {
   constructor(props) {
     super(props);
 
-    this.initialState = {
+    this.initState = {
       firstname: "",
       lastname: "",
       email: ""
     };
 
-    this.state = this.initialState;
+    this.state = this.initState;
   }
 
-  handleChange = event => {
+  textChange = event => {
     const { name, value } = event.target;
 
     this.setState({
@@ -25,7 +25,7 @@ class TextForm extends Component {
     event.preventDefault();
 
     this.props.handleSubmit(this.state);
-    this.setState(this.initialState);
+    this.setState(this.initState);
   };
 
   render() {
@@ -34,35 +34,33 @@ class TextForm extends Component {
     return (
       <form onSubmit={this.onFormSubmit}>
         <div className={s.form}>
-          
-            <div classname={s.block}>
-              <div className={s.item}>
-                <label>Firstname</label>
-                <input
-                  type="text"
-                  name="firstname"
-                  value={firstname}
-                  onChange={this.handleChange}
-                />
-              </div>
-              <div className={s.item}>
-                <label>Lastname</label>
-                <input
-                  type="text"
-                  name="lastname"
-                  value={lastname}
-                  onChange={this.handleChange}
-                />
-              </div>
-              <div className={s.item}>
-                <label>Email</label>
-                <input
-                  type="text"
-                  name="email"
-                  value={email}
-                  onChange={this.handleChange}
-                />
-              
+          <div classname={s.block}>
+            <div className={s.item}>
+              <label>Firstname</label>
+              <input
+                type="text"
+                name="firstname"
+                value={firstname}
+                onChange={this.textChange}
+              />
+            </div>
+            <div className={s.item}>
+              <label>Lastname</label>
+              <input
+                type="text"
+                name="lastname"
+                value={lastname}
+                onChange={this.textChange}
+              />
+            </div>
+            <div className={s.item}>
+              <label>Email</label>
+              <input
+                type="text"
+                name="email"
+                value={email}
+                onChange={this.textChange}
+              />
             </div>
           </div>
           <button type="submit">Add User</button>

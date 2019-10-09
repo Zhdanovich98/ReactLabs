@@ -9,16 +9,13 @@ import s from "./Users.module.css";
 
 class Users extends Component {
     render() {
-        const { characterData, removeCharacter } = this.props;
+        const { characterData, removeUser } = this.props;
 
         return (
           <div className={s.table}>
             <table>
               <Header />
-              <Content
-                characterData={characterData}
-                removeCharacter={removeCharacter}
-              />
+              <Content characterData={characterData} removeUser={removeUser} />
             </table>
           </div>
         );
