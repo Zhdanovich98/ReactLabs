@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import s from './TextForm.module.css';
 class TextForm extends Component {
   constructor(props) {
     super(props);
@@ -33,28 +33,40 @@ class TextForm extends Component {
 
     return (
       <form onSubmit={this.onFormSubmit}>
-        <label>Firstname</label>
-        <input
-          type="text"
-          name="firstname"
-          value={firstname}
-          onChange={this.handleChange}
-        />
-        <label>Lastname</label>
-        <input
-          type="text"
-          name="lastname"
-          value={lastname}
-          onChange={this.handleChange}
-        />
-        <label>Email</label>
-        <input
-          type="text"
-          name="email"
-          value={email}
-          onChange={this.handleChange}
-        />
-        <button type="submit">Add User</button>
+        <div className={s.form}>
+          
+            <div classname={s.block}>
+              <div className={s.item}>
+                <label>Firstname</label>
+                <input
+                  type="text"
+                  name="firstname"
+                  value={firstname}
+                  onChange={this.handleChange}
+                />
+              </div>
+              <div className={s.item}>
+                <label>Lastname</label>
+                <input
+                  type="text"
+                  name="lastname"
+                  value={lastname}
+                  onChange={this.handleChange}
+                />
+              </div>
+              <div className={s.item}>
+                <label>Email</label>
+                <input
+                  type="text"
+                  name="email"
+                  value={email}
+                  onChange={this.handleChange}
+                />
+              
+            </div>
+          </div>
+          <button type="submit">Add User</button>
+        </div>
       </form>
     );
   }
