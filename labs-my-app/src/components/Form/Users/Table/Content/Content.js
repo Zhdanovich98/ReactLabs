@@ -9,7 +9,7 @@ const Content = props => {
         <td>{line.email}</td>
         <td>
           <div className={s.button}>
-            <button onClick={() => props.removeUser(index)}>Delete</button>
+            <button onClick={() => props.deleteUser(index)}>Delete</button>
           </div>
         </td>
       </tr>

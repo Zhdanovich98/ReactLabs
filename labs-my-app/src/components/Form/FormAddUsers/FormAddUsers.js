@@ -9,7 +9,7 @@ class FormAddUsers extends Component {
     users: []
   };
 
-  removeUser = index => {
+  deleteUser = index => {
     const { users } = this.state;
 
     this.setState({
@@ -32,7 +32,7 @@ class FormAddUsers extends Component {
           <TextForm handleSubmit={this.handleSubmit} />
         </div>
         <div className={s.block}>
-          <Users userData={users} removeUser={this.removeUser} />
+          <Users userData={users} removeUser={this.deleteUser} />
         </div>
       </div>
     );

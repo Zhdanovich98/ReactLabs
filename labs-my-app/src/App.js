@@ -22,13 +22,13 @@ class App extends Component {
                   <NavLink to="/">Home</NavLink>
                 </li>
 
-                <li>
-                  {isAuthenticated() ? (
-                    <NavLink to="/tip/form">Special Tips</NavLink>
-                  ) : (
-                    ""
-                  )}
-                </li>
+                {isAuthenticated() ? (
+                  <li>
+                    <NavLink to="/tip/form">FormAddUser</NavLink>
+                  </li>
+                ) : (
+                  ""
+                )}
               </ul>
               <ul className="nav navbar-nav navbar-right">
                 {isAuthenticated() ? (
