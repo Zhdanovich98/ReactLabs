@@ -12,7 +12,7 @@ module.exports = (req, res, next) => {
   // decode token
   if (token) {
     // verifies secret and checks exp
-    jwt.verify(token, JWT_SECRET, function(err, decoded) {
+    jwt.verify(token, JWT_SECRET, (err, decoded) => {
       if (err) {
         return res.status(403).send({
           success: false,

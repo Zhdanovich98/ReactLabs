@@ -19,9 +19,7 @@ app.post("/api/auth", (req, res) => {
   if (user.length) {
     // create a token using user name and password vaild for 2 hours
     let token_payload = { name: user[0].name, password: user[0].password };
-    let token = jwt.sign(token_payload, "jwt_secret_password", {
-      expiresIn: "2h"
-    });
+    let token = jwt.sign(token_payload, "jwt_secret_password");
     let response = {
       message: "Token Created, Authentication Successful!",
       token: token
