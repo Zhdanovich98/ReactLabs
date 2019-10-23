@@ -8,9 +8,10 @@
 label {
     margin: 10px;
     color: Honeydew;
+    font: bold 15px/20px Arial;
 }
 
-button {
+.form button {
     margin-left: 40%;
     margin-bottom: 10px;
     position: relative;
@@ -30,7 +31,7 @@ button {
     background: linear-gradient(#FB9575, #F45A38 48%, #EA1502 52%, Cyan);
 }
 
-button:active {
+.form button:active {
     top: .1em;
     left: .1em;
     box-shadow: 0 0 0 60px rgba(0, 0, 0, .05) inset;
@@ -43,17 +44,13 @@ button:active {
     border-top-left-radius: 10px;
     border-top-right-radius: 50px;
 }
-input {
+.item input {
     width: 150px;
     height: 50px;
     
     border-radius: 10px;
 }
-label {
-    font: bold 15px/20px Arial;
-    
-    
-}
+
 
 
 

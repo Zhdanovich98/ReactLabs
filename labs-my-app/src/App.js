@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Login from "./components/login";
-import Form from "./components/Form";
+import Login from "./components/Auth/login";
+import Form from "./components/Form/Form";
 import Home from "./components/home";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
 import { isAuthenticated } from "./respository";
 
 class App extends Component {
@@ -19,12 +19,12 @@ class App extends Component {
               <div className="navbar-header"></div>
               <ul className="nav navbar-nav">
                 <li>
-                  <Link to="/">Home</Link>
+                  <NavLink to="/">Home</NavLink>
                 </li>
 
                 <li>
                   {isAuthenticated() ? (
-                    <Link to="/tip/special">Special Tips</Link>
+                    <NavLink to="/tip/form">Special Tips</NavLink>
                   ) : (
                     ""
                   )}
@@ -37,14 +37,14 @@ class App extends Component {
                   </li>
                 ) : (
                   <li>
-                    <Link to="/login">Log in</Link>
+                    <NavLink to="/login">Log in</NavLink>
                   </li>
                 )}
               </ul>
             </div>
           </nav>
           <Route exact path="/" component={Home} />
-          <Route exact path="/tip/special" component={Form} />
+          <Route exact path="/tip/form" component={Form} />
           <Route exact path="/login" component={Login} />
         </div>
       </Router>
