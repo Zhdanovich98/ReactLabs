@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import TextForm from "../TextForm/TextForm";
 import Users from "../Users/Users";
 
-import s from "./Form.module.css";
+import s from "./FormAddUsers.module.css";
 
-class Form extends Component {
+class FormAddUsers extends Component {
   state = {
     users: []
   };
@@ -39,4 +39,4 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default FormAddUsers;
