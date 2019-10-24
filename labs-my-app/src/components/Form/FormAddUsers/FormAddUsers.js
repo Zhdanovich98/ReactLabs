@@ -32,7 +32,7 @@ class FormAddUsers extends Component {
           <TextForm handleSubmit={this.handleSubmit} />
         </div>
         <div className={s.block}>
-          <Users userData={users} removeUser={this.deleteUser} />
+          <Users userData={users} deleteUser={this.deleteUser} />
         </div>
       </div>
     );
