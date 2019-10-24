@@ -23,16 +23,16 @@ class Login extends Component {
 
   render() {
     return (
-      <div>
+      <div className={s.container}>
         <hr />
         <div>
           <div>
-            <div>
+            <div className={s.login}>
               <h3>Log in </h3>
             </div>
             <div>
               <form onSubmit={this.submitLogin}>
-                <div>
+                <div className={s.item}>
                   <label>Name:</label>
                   <input
                     type="text"
@@ -40,7 +40,7 @@ class Login extends Component {
                     onChange={this.handleInputChange}
                   />
                 </div>
-                <div>
+                <div className={s.item}>
                   <label>Password:</label>
                   <input
                     type="password"
