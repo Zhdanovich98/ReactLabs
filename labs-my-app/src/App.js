@@ -24,7 +24,7 @@ class App extends Component {
 
                 {isAuthenticated() ? (
                   <li>
-                    <NavLink to="/tip/form">FormAddUser</NavLink>
+                    <NavLink to="/form">FormAddUser</NavLink>
                   </li>
                 ) : (
                   ""
@@ -44,7 +44,7 @@ class App extends Component {
             </div>
           </nav>
           <Route exact path="/" component={Home} />
-          <Route exact path="/tip/form" component={Form} />
+          <Route exact path="/form" component={Form} />
           <Route exact path="/login" component={Login} />
         </div>
       </Router>
